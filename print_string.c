@@ -10,8 +10,9 @@
 int printf_string(va_list args)
 {
 	char *ptr = va_arg(args, char *);
-	if(!ptr)
-		return(_puts("(null)"));
+
+	if (!ptr)
+		return (_puts("(null)"));
 	else
 		return (_puts(ptr));
 }
