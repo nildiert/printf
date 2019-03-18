@@ -25,4 +25,5 @@ int printnumber(int n);
 int _puts(char *str);
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printf_string(va_list args);
 #endif/* HOLBERTON_H */

@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	operations_t types[] = {
 		{"c", printf_char},
 		{"i", printf_int},
+		{"s", printf_string},
 		{NULL, NULL}};
 
 	int j, i = 0, counter = 0;
