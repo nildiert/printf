@@ -39,13 +39,13 @@ int _printf(const char *format, ...)
 			for (j = 0; types[j].operation; j++)
 			{
 				if (*(types[j].operation) == format[i])
-				{ counter += types[j].f(args);
+					counter += types[j].f(args);
+				else
 					diff++; }
-			}
-			if (diff != 0)
+			if (diff == j)
 			{ _putchar('%');
-				_putchar(format[i]); } }
-	}
+				_putchar(format[i]); }
+			diff = 0; } }
 	va_end(args);
 	return (counter);
 }
