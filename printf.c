@@ -1,4 +1,3 @@
-/*this file while content the printf project*/
 #include "holberton.h"
 
 /**
@@ -13,6 +12,7 @@ int _printf(const char *format, ...)
 		{"c", printf_char},
 		{"i", printf_int},
 		{"s", printf_string},
+		{"%", printf_percent},
 		{NULL, NULL}};
 
 	int j, i = 0, counter = 0, diff = 0;
@@ -32,20 +32,16 @@ int _printf(const char *format, ...)
 			i++;
 		else
 			break;
-		if (format[i] == '%')
-			counter += _putchar('%');
-		else
+		for (j = 0; types[j].operation; j++)
 		{
-			for (j = 0; types[j].operation; j++)
-			{
-				if (*(types[j].operation) == format[i])
-					counter += types[j].f(args);
-				else
-					diff++; }
-			if (diff == j)
-			{ counter += _putchar('%');
-				counter += _putchar(format[i]); }
-			diff = 0; } }
+			if (*(types[j].operation) == format[i])
+				counter += types[j].f(args);
+			else
+				diff++; }
+		if (diff == j)
+		{ counter += _putchar('%');
+			counter += _putchar(format[i]); }
+		diff = 0; }
 	va_end(args);
 	return (counter);
 }
