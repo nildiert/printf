@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		{"s", printf_string},
 		{NULL, NULL}};
 
-	int j, i = 0, counter = 0;
+	int j, i = 0, counter = 0, diff = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -40,7 +40,15 @@ int _printf(const char *format, ...)
 			{
 				if (*(types[j].operation) == format[i])
 					counter += types[j].f(args);
+				else
+					diff++;
 			}
+			if (diff == j)
+			{
+				_putchar('%');
+				_putchar(format[i]);
+			}
+			diff = 0;
 		}
 		i++;
 	}
