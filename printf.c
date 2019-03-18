@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			counter += _putchar(format[i]);
 			i++;
 		}
-		if (format[i] != '\0')
+		if (format[i] != '\0' && format[i + 1] != '\0')
 			i++;
 		else
 			break;
