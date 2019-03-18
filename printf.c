@@ -43,8 +43,8 @@ int _printf(const char *format, ...)
 				else
 					diff++; }
 			if (diff == j)
-			{ _putchar('%');
-				_putchar(format[i]); }
+			{ counter += _putchar('%');
+				counter += _putchar(format[i]); }
 			diff = 0; } }
 	va_end(args);
 	return (counter);
