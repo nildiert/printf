@@ -20,6 +20,7 @@ typedef struct operations
 int printf_char(va_list args);
 int printf_int(va_list args);
 int printf_percent(va_list args);
+int printf_dec(va_list args);
 
 int printnumber(int n);
 int _puts(char *str);
