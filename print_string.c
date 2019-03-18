@@ -9,5 +9,10 @@
  */
 int printf_string(va_list args)
 {
-	return (_puts(va_arg(args, char *)));
+	char *ptr = va_arg(args, char *);
+
+	if (!ptr)
+		return (_puts("(null)"));
+	else
+		return (_puts(ptr));
 }

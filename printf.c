@@ -1,4 +1,3 @@
-/*this file while content the printf project*/
 #include "holberton.h"
 
 /**
@@ -13,6 +12,8 @@ int _printf(const char *format, ...)
 		{"c", printf_char},
 		{"i", printf_int},
 		{"s", printf_string},
+		{"%", printf_percent},
+		{"d", printf_dec},
 		{NULL, NULL}};
 
 	int j, i = 0, counter = 0, diff = 0;
