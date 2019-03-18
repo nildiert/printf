@@ -39,10 +39,14 @@ int _printf(const char *format, ...)
 				counter += types[j].f(args);
 			else
 				diff++; }
-		if (diff == j)
-		{ counter += _putchar('%');
-			counter += _putchar(format[i]); }
-		diff = 0; }
+		if (diff == j) 
+		{ 
+			if (format[i] > 32 && format[i] != '%') 
+			{ counter += _putchar('%'); 
+				counter += _putchar(format[i]); } 
+			else 
+				counter += _putchar(format[i]); 
+			diff = 0; } }
 	va_end(args);
 	return (counter);
 }
