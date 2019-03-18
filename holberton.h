@@ -19,4 +19,7 @@ typedef struct operations
 } operations_t;
 /* this prototype has to be declared in a header file */
 int printf_char(va_list args);
+int _puts(char *str);
+int _putchar(char c);
+int _printf(const char *format, ...);
 #endif/* HOLBERTON_H */
