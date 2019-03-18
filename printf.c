@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 		{"i", printf_int},
 		{"s", printf_string},
 		{"%", printf_percent},
+		{"d", printf_dec},
 		{NULL, NULL}};
 
 	int j, i = 0, counter = 0, diff = 0;
