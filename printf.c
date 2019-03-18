@@ -19,9 +19,9 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	if(format == NULL)
+	if (format == NULL)
 		return (-1);
-	while (format && format[i] != '\0')
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		while (format[i] != '%' && format[i] != '\0')
 		{
@@ -39,18 +39,12 @@ int _printf(const char *format, ...)
 			for (j = 0; types[j].operation; j++)
 			{
 				if (*(types[j].operation) == format[i])
-					counter += types[j].f(args);
-				else
-					diff++;
+				{ counter += types[j].f(args);
+					diff++; }
 			}
-			if (diff == j)
-			{
-				_putchar('%');
-				_putchar(format[i]);
-			}
-			diff = 0;
-		}
-		i++;
+			if (diff != 0)
+			{ _putchar('%');
+				_putchar(format[i]); } }
 	}
 	va_end(args);
 	return (counter);
