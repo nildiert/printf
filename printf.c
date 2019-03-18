@@ -26,25 +26,24 @@ int _printf(const char *format, ...)
 		while (format[i] != '%' && format[i] != '\0')
 		{
 			counter += _putchar(format[i]);
-			i++;
-		}
+			i++; }
 		if (format[i] != '\0' && format[i + 1] != '\0')
 			i++;
 		else
 			break;
-		if (format[i] == '%')
-			counter += _putchar('%');
-		else
+		for (j = 0; types[j].operation; j++)
 		{
-			for (j = 0; types[j].operation; j++)
-			{
-				if (*(types[j].operation) == format[i])
-					counter += types[j].f(args);
-				else
-					diff++; }
-			if (diff == j)
+			if (*(types[j].operation) == format[i])
+				counter += types[j].f(args);
+			else
+				diff++; }
+		if (diff == j)
+		{
+			if (format[i] > 32 && format[i] != '%')
 			{ counter += _putchar('%');
 				counter += _putchar(format[i]); }
+			else
+				counter += _putchar(format[i]);
 			diff = 0; } }
 	va_end(args);
 	return (counter);
