@@ -8,7 +8,13 @@
  */
 int printf_dec(va_list args)
 {
+	int count;
 	int n = va_arg(args, int);
 
-	return (_putchar(n % 10 + '0'));
+	count = 0;
+	if (n / 10)
+		count += printnumber(n / 10);
+
+	count += _putchar(n % 10 + '0');
+	return (count);
 }
