@@ -8,18 +8,24 @@
  */
 int printnumber(int n)
 {
+	int count;
 
+	count = 0;
 	if (n < 0)
 	{
-		_putchar('-');
+		count += _putchar('-');
 		n = -n;
 	}
 
 	if (n == 0)
-		_putchar('0');
-
+	{
+		count += _putchar('0');
+		return (count);
+	}
 	if (n / 10)
-		printnumber(n / 10);
+		count += printnumber(n / 10);
 
-	return (_putchar(n % 10 + '0'));
+	 count += _putchar(n % 10 + '0');
+
+	return (count);
 }

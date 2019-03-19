@@ -8,7 +8,11 @@
  */
 int printf_dec(va_list args)
 {
+	int count;
 	int n = va_arg(args, int);
 
-	return (_putchar(n % 10 + '0'));
+	count = 0;
+	count += printnumber(n);
+
+        return (count);
 }
