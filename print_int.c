@@ -8,11 +8,11 @@
  */
 int printf_int(va_list args)
 {
-        int count;
-        int n = va_arg(args, int);
+	int count;
+	int n = va_arg(args, int);
 
-        count = 0;
-        count += printnumber(n);
+	count = 0;
+	count += printnumber(n);
 
 	return (count);
 
