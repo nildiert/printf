@@ -9,12 +9,8 @@
 int _printf(const char *format, ...)
 {
 	operations_t types[] = {
-		{"c", printf_char},
-		{"i", printf_int},
-		{"s", printf_string},
-		{"%", printf_percent},
-		{"d", printf_dec},
-		{NULL, NULL}};
+		{"c", printf_char}, {"i", printf_int}, {"s", printf_string},
+		{"%", printf_percent}, {"d", printf_dec}, {NULL, NULL}};
 
 	int j, i = 0, counter = 0, diff = 0;
 	va_list args;
@@ -27,8 +23,7 @@ int _printf(const char *format, ...)
 		while (format[i] != '%' && format[i] != '\0')
 		{
 			counter += _putchar(format[i]);
-			i++;
-		}
+			i++; }
 		if (format[i] != '\0' && format[i + 1] != '\0')
 			i++;
 		else
