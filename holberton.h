@@ -26,7 +26,10 @@ int printf_bin(va_list args);
 int printf_oct(va_list args);
 int printf_hexa(va_list args);
 int printf_hexa_mayus(va_list args);
+int printf_unsi(va_list args);
 
+
+int printnumberunsi(unsigned int n);
 char printbase_bin(unsigned int num);
 int printnumberoctal(unsigned int n);
 int print_hexa_minus(unsigned int n);
