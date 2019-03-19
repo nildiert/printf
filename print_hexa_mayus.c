@@ -9,7 +9,7 @@
 int printf_hexa_mayus(va_list args)
 {
 	int count;
-	int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, unsigned int);
 
 	count = 0;
 	count += print_hexa_mayus(n);

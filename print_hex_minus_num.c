@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-int print_hexa_minus(int n)
+int print_hexa_minus(unsigned int n)
 {
 	int count = 0;
 	unsigned int num = n;

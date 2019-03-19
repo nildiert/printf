@@ -29,8 +29,8 @@ int printf_hexa_mayus(va_list args);
 
 char printbase_bin(unsigned int num);
 int printnumberoctal(unsigned int n);
-int print_hexa_minus(int n);
-int print_hexa_mayus(int n);
+int print_hexa_minus(unsigned int n);
+int print_hexa_mayus(unsigned int n);
 int printnumber(int n);
 int _puts(char *str);
 int _putchar(char c);
