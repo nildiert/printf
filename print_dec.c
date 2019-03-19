@@ -12,9 +12,7 @@ int printf_dec(va_list args)
 	int n = va_arg(args, int);
 
 	count = 0;
-	if (n / 10)
-		count += printnumber(n / 10);
+	count += printnumber(n);
 
-	count += _putchar(n % 10 + '0');
-	return (count);
+        return (count);
 }
