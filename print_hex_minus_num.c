@@ -19,7 +19,8 @@ int print_hexa_minus(unsigned int n)
 
 	do {
 		*--ptr = hexa[num % 16];
-		count += num /= 16;
+		count++;
+		num /= 16;
 	} while (num != 0);
 	_puts(ptr);
 
