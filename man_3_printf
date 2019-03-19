@@ -1,0 +1,62 @@
+.TH man 2 "19 Mar 2019" "0.1" "_printf man page"
+.SH NAME
+.B _printf
+- formtted output conversion
+.SH SYNOPSIS
+#include "holberton.h"
+
+.PP
+.B int _printf(const char *format, ...);
+.PP
+.B int printnumberoctal(unsigned int n);
+.PP
+.B int _puts(char *str);
+.PP
+.B int _putchar(char c);
+
+.PP
+.B #include <stdarg.h>
+.PP
+.B int printf_char(va_list args);
+.PP
+.B int printf_string(va_list args);
+.PP
+.B int printf_int(va_list args);
+.PP
+.B int printf_dec(va_list args);
+.PP
+.B int printnumber(int n);
+.PP
+.B int printf_oct(va_list args);
+.PP
+.B int printf_percent(va_list args);
+
+.SH DESCRIPTION
+_printf() produce output according to a format, write output to stdout
+.SH RETURN
+Upon successful return, this function return the number of characters printed (excluding the null byte used to end output to strings).
+If an output error is encountered, a negative value is returned.
+.SH FORMAT
+The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream
+
+printf("%d",  num);
+.SH CONVERSION
+The character % is followed by A character that specifies the type of conversion to be applied.
+
+.B d, i
+
+The int argument is converted to signed decimal notation.
+
+.B c
+
+The c argument is converted to a char and is written
+
+.B s
+
+The s argument represents a string of characters, an expect an array
+.SH SEE ALSO
+.I printf(3), puts(3), putchar(3)
+.SH BUGS
+for now the function _printf don’t handle the flag characters, field width,  precision, and length modifiers
+.SH AUTHOR
+Nildiert Jimenez and Yesid Gonzalez
