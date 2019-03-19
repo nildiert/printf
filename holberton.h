@@ -23,8 +23,10 @@ int printf_int(va_list args);
 int printf_percent(va_list args);
 int printf_dec(va_list args);
 int printf_bin(va_list args);
+int printf_oct(va_list args);
 
 char printbase_bin(unsigned int num);
+int printnumberoctal(unsigned int n);
 int printnumber(int n);
 int _puts(char *str);
 int _putchar(char c);
