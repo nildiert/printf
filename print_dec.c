@@ -14,5 +14,5 @@ int printf_dec(va_list args)
 	count = 0;
 	count += printnumber(n);
 
-        return (count);
+	return (count);
 }
