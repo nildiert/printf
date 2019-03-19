@@ -9,12 +9,14 @@
 int printnumber(int n)
 {
 	int count;
+	unsigned int num;
 
+	num = n;
 	count = 0;
 	if (n < 0)
 	{
 		count += _putchar('-');
-		n = -n;
+		num = -num;
 	}
 
 	if (n == 0)
@@ -22,10 +24,10 @@ int printnumber(int n)
 		count += _putchar('0');
 		return (count);
 	}
-	if (n / 10)
-		count += printnumber(n / 10);
+	if (num / 10)
+		count += printnumber(num / 10);
 
-	 count += _putchar(n % 10 + '0');
+	 count += _putchar(num % 10 + '0');
 
 	return (count);
 }
