@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{"c", printf_char}, {"i", printf_int}, {"s", printf_string},
 		{"b", printf_bin}, {"%", printf_percent}, {"d", printf_dec},
 		{"o", printf_oct}, {"x", printf_hexa}, {"X", printf_hexa_mayus},
-    {"u", printf_unsi}, {NULL, NULL}};
+		{"u", printf_unsi}, {NULL, NULL}};
 
 	int j, i = 0, counter = 0, diff = 0;
 	va_list args;
