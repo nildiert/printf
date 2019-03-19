@@ -24,7 +24,9 @@ int printf_percent(va_list args);
 int printf_dec(va_list args);
 int printf_bin(va_list args);
 int printf_oct(va_list args);
+int printf_unsi(va_list args);
 
+int printnumberunsi(unsigned int n);
 char printbase_bin(unsigned int num);
 int printnumberoctal(unsigned int n);
 int printnumber(int n);
