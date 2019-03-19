@@ -27,7 +27,7 @@ int printf_oct(va_list args);
 int printf_hexa(va_list args);
 int printf_hexa_mayus(va_list args);
 int printf_unsi(va_list args);
-
+int printf_rev(va_list args);
 
 int printnumberunsi(unsigned int n);
 char printbase_bin(unsigned int num);
