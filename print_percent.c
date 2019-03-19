@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * printf_percent - print just character 
+ * printf_percent - print just character
  * @args: argumentos to print
  *
  * Return: 1
