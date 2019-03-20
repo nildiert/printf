@@ -11,7 +11,7 @@ see [Printf](https://www.tutorialspoint.com/c_standard_library/c_function_printf
 ## usage example
 
 ```
-int printf(const char *format, ...)
+int _printf(const char *format, ...)
 ```
 
 * **c** - Character
@@ -19,5 +19,10 @@ int printf(const char *format, ...)
 * **d or i** - Signed decimal integer
 
 * **s** - String of characters
+
+```
+_printf("%c \n This is a char", 'h');
+```
+
 
 ----
